@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quotes App</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <% include header %>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% quotes.forEach(function(quote){ %>
+      <div class="col-xs-4">
+        <div><b>Text:</b> <%- link_to(quote.text, '/quotes/' + quote._id) %></div>
+        <div><b>Author:</b> <%= quote.author %></div>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+<div class="container">
+  <% include quotes/forms %>
+</div>
+
+<div class="container">
+  <% include footer %>
+</div>
+
+</body>
+</html>
