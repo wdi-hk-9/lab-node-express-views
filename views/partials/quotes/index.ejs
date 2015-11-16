@@ -1,0 +1,11 @@
+  <div class="container">
+    <div class="row">
+      <% quotes.forEach(function(quote) { %>
+        <div class="col-xs-4 well quote">
+          <div><b>Quote : </b>  <%= quote.text %></div>
+          <div><b>Author : </b> <%= quote.author %></div>
+          <div><b>Name : </b>  <% include create %></div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
