@@ -13,18 +13,18 @@ function getAll(request, response) {
 
 // NEW
 function newQuote(request, response) {
-  if (error) response.json({message: 'There was an error. ' + err})
+  response.render('quotes/new');
 }
 
 // CREATE
 function createQuote(request, response) {
   console.log('in POST');
-  console.log('body:',request.body);
-  var quote = new Quote(request.body);
+  console.log('body:',request.body.quote);
+  var quote = new Quote(request.body.quote);
 
   quote.save(function(error) {
     if (error) response.json({messsage: 'Could not ceate quote b/c:' + error});
-    console.log(quote);
+    // console.log(quote);
     // response.json(quote);
     response.redirect('/quotes')
   });
@@ -50,7 +50,7 @@ function updateQuote(request, response) {
     if (error) response.json({message: 'Could not find quote b/c:' + error});
 
     if(request.body.quote.text) quote.text = request.body.quote.text;
-    if(request.body.quote.author) quote.author = request.body.author;
+    if(request.body.quote.author) quote.author = request.body.quote.author;
 
     quote.save(function(error) {
       if (error) response.json({messsage: 'Could not update quote b/c:' + error});

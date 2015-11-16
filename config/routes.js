@@ -13,11 +13,11 @@ router.route('/')
 router.route('/quotes')
   .get(quotesController.getAll)
   .post(quotesController.createQuote);
+router.route('/quotes/new')
+  .get(quotesController.newQuote);
 router.route('/quotes/:id')
   .get(quotesController.getQuote)
   .put(quotesController.updateQuote)
   .delete(quotesController.removeQuote);
-router.route('/quotes/new')
-  .get(quotesController.newQuote);
 
 module.exports = router;
