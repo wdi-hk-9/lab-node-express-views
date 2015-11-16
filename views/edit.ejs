@@ -1,0 +1,5 @@
+<form action="/quotes/<%- quote._id %>?_method=put" method="POST">
+  <input type="text" placeholder="This is a quote..." name="quote[text]" value="<%- quote.text %>">
+  <input type="text" name="quote[author]"  value="<%- quote.author %>">
+  <button type="submit">UPDATE</button>
+</form>
