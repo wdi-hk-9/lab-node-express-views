@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+  <title>Quotes Inc</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
+</head>
+
+<body>
+  <h1>Quotes, Inc</h1>
+
+  <div class="container">
+    <div class="row">
+      <% quotes.forEach(function(quote) { %>
+        <div class="col-xs-4 well">
+          <div><b>Text : </b><%- link_to(quote.text, '/quotes/'+ quote._id) %></div>
+          <div><b>Author : </b> <%= quote.author %></div>
+          <form action="/quotes/<%- quote._id %>?_method=delete" method="POST">
+            <button type="submit" class="btn btn-danger">DELETE</button>
+          </form>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+
+  <div class="container">
+    <a href="/quotes/new/form">Add a Quote</a>
+  </div>
+
+  <div class="container">
+    <% include footer %>
+  </div>
+</body>
+</html>
