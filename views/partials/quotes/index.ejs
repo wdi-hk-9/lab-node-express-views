@@ -1,10 +1,10 @@
   <div class="container">
     <div class="row">
       <% quotes.forEach(function(quote) { %>
-        <div class="col-xs-4 well candy">
+        <div class="col-xs-4 well quote">
           <div><b>Quote : </b>  <%= quote.text %></div>
           <div><b>Author : </b> <%= quote.author %></div>
-          <div><b>Name : </b>  <%- link_to('Add new quote', '/quotes/create') %></div>
+          <div><b>Name : </b>  <% include create %></div>
         </div>
       <% }) %>
     </div>

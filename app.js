@@ -4,7 +4,6 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var helpers    = require('express-helpers');
 var app = express();
-var connect        = require('connect');
 
 // database setup
 var mongoose = require('mongoose');
@@ -28,4 +27,6 @@ app.use(routes);
 
 app.listen(3000);
 console.log('we are alive!')
+
+
 

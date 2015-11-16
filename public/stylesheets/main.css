@@ -40,3 +40,7 @@ blockquote footer {
   margin-top: 0;
   font-style: italic;
 }
+
+.quote {
+  width: 100%
+}
