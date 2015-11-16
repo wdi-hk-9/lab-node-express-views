@@ -1,0 +1,13 @@
+<ul id="quotes">
+  <% quotes.forEach(function(quote){ %>
+    <li>
+      <blockquote><p><%= quote.text %></p></blockquote>
+      <blockquote><footer><%= quote.author %></footer></blockquote>
+      <form method="POST" action="/quotes/<%= quote.id %>?_method=DELETE">
+        <button type="submit" class="btn btn-default">Delete Quote</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>
+
+<a href="quotes/new">Add A New Quote</a>
