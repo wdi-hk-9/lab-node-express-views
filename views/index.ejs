@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="quotes">
+    <% quotes.forEach(function(quote){%>
+    <blockquote>
+      <p><%- quote.text %></p>
+      <small>by <cite><%- quote.author %></cite></small>
+    </blockquote>
+    <form action="/quotes/<%- quote._id %>?_method=delete" method="POST">
+      <button type="submit" class="btn btn-danger">DELETE</button>
+    </form>
+    <a href="/quotes/edit/<%- quote._id %>" class="btn btn-success">EDIT</a>
+    <% }); %>
+  </div>
+  <a href="/quotes/show/new">Add A New Quote</a>
+</div>
