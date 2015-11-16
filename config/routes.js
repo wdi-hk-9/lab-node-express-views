@@ -13,5 +13,9 @@ router.route('/quotes/:id')
   .get(quotesController.getQuote)
   .put(quotesController.updateQuote)
   .delete(quotesController.removeQuote);
+router.route('/quotes/show/new')
+  .get(quotesController.newQuote)
+router.route('/quotes/edit/:id')
+  .get(quotesController.editQuote)
 
 module.exports = router;
