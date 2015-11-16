@@ -69,4 +69,4 @@ module.exports = {
   getQuote: getQuote,
   updateQuote: updateQuote,
   removeQuote: removeQuote
-};
+}

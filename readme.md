@@ -16,6 +16,7 @@ Your goal will be to switch an Express JSON API to render views. It's up to you 
     - header
     - footer
 
+
 - Render forms that submit data back to our Express app to make a full-stack app
 
 #### Deliverable
