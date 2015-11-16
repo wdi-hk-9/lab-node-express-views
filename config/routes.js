@@ -13,6 +13,9 @@ router.route('/')
 router.route('/quotes')
   .get(quotesController.getAll)
   .post(quotesController.createQuote);
+
+router.get('/quotes/new', quotesController.newQuote);
+
 router.route('/quotes/:id')
   .get(quotesController.getQuote)
   .put(quotesController.updateQuote)
