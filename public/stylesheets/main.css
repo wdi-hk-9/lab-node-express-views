@@ -2,7 +2,9 @@
 
 .container {
   max-width: 580px;
+  font-size: 3rem;
 }
+
 
 h1 {
   font-family: 'Playfair Display SC', serif;
@@ -33,6 +35,7 @@ blockquote p {
   font-size: 2.1rem;
   line-height: 1.3;
 }
+
 blockquote footer {
   margin-top: 0;
   font-style: italic;

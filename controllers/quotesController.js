@@ -1,12 +1,11 @@
-var Quote = require('../models/Quote');
+var Quote = require('../models/quote');
 
 
 // INDEX
 function getAll(request, response) {
   Quote.find(function(error, quotes) {
     if(error) response.json({message: 'Could not find any quote'});
-
-    response.json({quotes: quotes});
+    response.render('partials/quotes/index', {quotes: quotes});
   });
 }
 
