@@ -22,7 +22,7 @@ router.route('/quotes/:id')
 
   .get(quotesController.getQuote)
 
-  .put(quotesController.updateQuote)
+  .patch(quotesController.updateQuote)
 
   .delete(quotesController.removeQuote);
 

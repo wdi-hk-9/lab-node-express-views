@@ -9,19 +9,18 @@
 </head>
 <body>
 
-<fieldset>
-  <form method="POST" action="/quotes/<%= quote._id %>?_method=PATCH">
-    <div class="form-group col-md-4">
-      <input name="quote[text]" class="form-control" placeholder="Text" value="<%= quote.text %>" />
-    </div>
-    <div class="form-group col-md-4">
-      <input name="quote[author]" class="form-control" placeholder="Author" value="<%= quote.author %>" />
-    </div>
-    <div class="form-group col-md-4">
-      <input class="btn btn-primary col-md-12" type="submit" value="Submit">
-    </div>
-  </form>
-</fieldset>
+<div class="container">
+  <% include ../header %>
+</div>
+
+<div class="container">
+  <% var action = "/quotes/" + quote._id + "?_method=PATCH" %>
+  <% include forms %>
+</div>
+
+<div class="container">
+  <% include ../footer %>
+</div>
 
 </body>
 </html>
